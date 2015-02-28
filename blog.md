@@ -12,11 +12,11 @@ you will start sqlite3 on the command line. We will progress toward using sqlite
 -----------------------------------------
 There are two types of commands I'm going to show you. Some start with a
 
-  .
+  >.
 
 like
 
-  .help
+  >.help
 
 this is how you can give instructions to the database engine, the rest of the commands are in the SQL language and that is how we create and query the information in our database.
 
@@ -26,6 +26,7 @@ Right now, if you are at the sqlite prompt, you can prettify the output by enter
   .mode columns
 
 This will cause the output to include headers and align the output in columns. Much nicer and easier to read.
+
 -------------------------------------------
  
 
