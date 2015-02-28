@@ -32,8 +32,11 @@ This will cause the output to include headers and align the output in columns. M
 
 
 The SQL CREATE TABLE Statement
+
 The CREATE TABLE statement is used to create a table in a database.
+
 Tables are organized into rows and columns; and each table must have a name.
+
 SQL CREATE TABLE Syntax
 
 >CREATE TABLE table_name
@@ -53,23 +56,23 @@ SQL CREATE TABLE Syntax
 
 How to write output of an SQL query to a csv
 
-  sqlite> .mode csv
+>sqlite> .mode csv
   
-sqlite> .separator ,
+>sqlite> .separator ,
 
-sqlite> .output test_file_1.csv
+>sqlite> .output test_file_1.csv
 
-sqlite> select * from tbl2;
+>sqlite> select * from tbl2;
 
-sqlite> .exit
+>sqlite> .exit
 
-Psycholinguistic_databases Wintermute$ cat test_file_1.csv
+>Psycholinguistic_databases Wintermute$ cat test_file_1.csv
 
-id,word
+>id,word
 
-0,aaron
+>0,aaron
 
-1,aargh
+>1,aargh
 
-Psycholinguistic_databases Wintermute$
+>Psycholinguistic_databases Wintermute$
 
