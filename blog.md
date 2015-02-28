@@ -22,8 +22,8 @@ this is how you can give instructions to the database engine, the rest of the co
 
 Right now, if you are at the sqlite prompt, you can prettify the output by entering the following
 
-  .headers on
-  .mode columns
+  >.headers on
+  >.mode columns
 
 This will cause the output to include headers and align the output in columns. Much nicer and easier to read.
 
@@ -36,19 +36,19 @@ The CREATE TABLE statement is used to create a table in a database.
 Tables are organized into rows and columns; and each table must have a name.
 SQL CREATE TABLE Syntax
 
-  CREATE TABLE table_name
+>CREATE TABLE table_name
 
-(
+>(
 
-column_name1 data_type(size),
+>column_name1 data_type(size),
 
-column_name2 data_type(size),
+>column_name2 data_type(size),
 
-column_name3 data_type(size),
+>column_name3 data_type(size),
 
-....
+>....
 
-);
+>);
 
 
 How to write output of an SQL query to a csv
