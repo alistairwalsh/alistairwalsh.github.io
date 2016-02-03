@@ -3,7 +3,8 @@ published: true
 title: My First Post
 layout: post
 ---
-Things to do now Resbaz is over
+#Things to do now Resbaz is over
+--------------
 
 - Machine Learning course
 - Virtual reality development
@@ -11,4 +12,4 @@ Things to do now Resbaz is over
 - Assess level of applicants via survey or challenge
 - Pandas Lesson
 - Numpy Lesson
-- Flask Lesson 
+- Flask Lesson
