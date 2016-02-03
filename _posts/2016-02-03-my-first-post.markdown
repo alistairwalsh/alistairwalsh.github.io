@@ -3,7 +3,7 @@ published: true
 title: My First Post
 layout: post
 ---
-#Things to do now Resbaz is over
+Things to do now Resbaz is over
 --------------
 
 - Machine Learning course
