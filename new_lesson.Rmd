@@ -1,0 +1,67 @@
+---
+title: "New Lesson"
+author: "Alistair Walsh"
+date: "8 February 2016"
+output: html_document
+---
+
+In general the Software Carpentry lessons are focussed on 'How To' and not why. I've come to think of this as the distinction between what we are teaching and what a computer science course teaches. In general we imagine our audience wanting to know how to do something with a programming language rather than wanting to understand how that is happening behind the scenes. 
+A quick example of this is memory addresses. When i assign a value to a vaiable and then assign another variable to the first, I am not creating a copy of the data, I am pointing another variable name to the same memory address.
+When I present this idea in a class, I don't explain that - I show them what happens.
+
+```{python}
+
+a = ['red','green','blue','yellow']
+b = a
+print(a)
+print(b)
+
+```
+
+```{python}
+a = ['red','green','blue','yellow']
+b = a
+a.append('purple') 
+print(a)
+print(b)
+```
+
+And the way around that if that's not what you want to happen is to explicitly create another list:
+
+
+```{python}
+a = ['red','green','blue','yellow']
+b = list(a)
+a.append('purple') 
+print(a)
+print(b)
+
+```
+
+You'll notice there is no talk of memory addresses or how memory is assigned. No mention of garbage collection when data is no longer referenced by anything. In fact no description of the underlying performance of the language.
+I am simply demonstrating what happens and bringing it to the learners attention.
+
+In a computer science focussed class this might be explained like this. the id( ) function in Python returns the memory address of an object. 
+
+
+```{python}
+a = ['red','green','blue','yellow']
+
+# This creates a second pointer to the same memory address
+b = a
+
+print(id(a))
+print(id(b))
+
+print(id(a)==id(b))
+
+# This creates a copy of a at a new memory address
+b = list(a)
+
+print(id(a))
+print(id(b))
+print(id(a)==id(b))
+```
+
+
+
