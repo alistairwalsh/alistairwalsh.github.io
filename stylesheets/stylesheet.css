@@ -283,6 +283,8 @@ a.button,
 .approach,
 .projects,
 .timeline,
+.publications,
+.qualifications,
 .creative,
 .toolbox,
 .callout {
@@ -343,7 +345,9 @@ a.button,
 
 .focus-card,
 .project-card,
-.tool-card {
+.tool-card,
+.publication-card,
+.credential-card {
   padding: 2rem 1.75rem;
   border-radius: var(--radius-md);
   background: var(--surface-alt);
@@ -387,14 +391,20 @@ a.button,
 .project-card:hover,
 .project-card:focus-within,
 .tool-card:hover,
-.tool-card:focus-within {
+.tool-card:focus-within,
+.publication-card:hover,
+.publication-card:focus-within,
+.credential-card:hover,
+.credential-card:focus-within {
   transform: translateY(-4px);
   border-color: rgba(108, 240, 194, 0.5);
 }
 
 .focus-card h3,
 .project-card h3,
-.tool-card h3 {
+.tool-card h3,
+.publication-card h3,
+.credential-card h3 {
   font-family: 'Space Grotesk', sans-serif;
   margin: 0;
   font-size: 1.4rem;
@@ -402,7 +412,9 @@ a.button,
 
 .focus-card p,
 .project-card p,
-.tool-card p {
+.tool-card p,
+.publication-card p,
+.credential-card p {
   margin: 0;
   color: var(--muted);
 }
@@ -417,6 +429,46 @@ a.button,
 
 .focus-card li::marker {
   color: rgba(108, 240, 194, 0.8);
+}
+
+.publication-card time {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(108, 240, 194, 0.75);
+}
+
+.publication-card ul,
+.credential-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(248, 249, 251, 0.75);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.publication-card li::marker,
+.credential-card li::marker {
+  color: rgba(108, 240, 194, 0.65);
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.7rem;
+}
+
+.credential-card header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.credential-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(108, 240, 194, 0.75);
 }
 
 .services {
