@@ -279,8 +279,12 @@ a.button,
 
 .stats,
 .focus,
+.services,
+.approach,
 .projects,
 .timeline,
+.publications,
+.qualifications,
 .creative,
 .toolbox,
 .callout {
@@ -341,7 +345,9 @@ a.button,
 
 .focus-card,
 .project-card,
-.tool-card {
+.tool-card,
+.publication-card,
+.credential-card {
   padding: 2rem 1.75rem;
   border-radius: var(--radius-md);
   background: var(--surface-alt);
@@ -385,14 +391,20 @@ a.button,
 .project-card:hover,
 .project-card:focus-within,
 .tool-card:hover,
-.tool-card:focus-within {
+.tool-card:focus-within,
+.publication-card:hover,
+.publication-card:focus-within,
+.credential-card:hover,
+.credential-card:focus-within {
   transform: translateY(-4px);
   border-color: rgba(108, 240, 194, 0.5);
 }
 
 .focus-card h3,
 .project-card h3,
-.tool-card h3 {
+.tool-card h3,
+.publication-card h3,
+.credential-card h3 {
   font-family: 'Space Grotesk', sans-serif;
   margin: 0;
   font-size: 1.4rem;
@@ -400,7 +412,9 @@ a.button,
 
 .focus-card p,
 .project-card p,
-.tool-card p {
+.tool-card p,
+.publication-card p,
+.credential-card p {
   margin: 0;
   color: var(--muted);
 }
@@ -415,6 +429,155 @@ a.button,
 
 .focus-card li::marker {
   color: rgba(108, 240, 194, 0.8);
+}
+
+.publication-card time {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(108, 240, 194, 0.75);
+}
+
+.publication-card ul,
+.credential-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(248, 249, 251, 0.75);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.publication-card li::marker,
+.credential-card li::marker {
+  color: rgba(108, 240, 194, 0.65);
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.7rem;
+}
+
+.credential-card header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.credential-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(108, 240, 194, 0.75);
+}
+
+.services {
+  background: rgba(5, 6, 10, 0.6);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.7rem;
+}
+
+.service-card {
+  padding: 2.2rem 1.9rem;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid rgba(108, 240, 194, 0.22);
+  box-shadow: 0 28px 60px -50px rgba(57, 193, 255, 0.65);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.service-card h3 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.45rem;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.service-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(248, 249, 251, 0.8);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.service-card li::marker {
+  color: rgba(108, 240, 194, 0.8);
+}
+
+.service-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  border-color: rgba(108, 240, 194, 0.45);
+  transform: translateY(-4px);
+}
+
+.approach-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.7rem;
+}
+
+.approach-step {
+  padding: 2.1rem 1.8rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-alt);
+  border: 1px solid rgba(108, 240, 194, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.approach-step::after {
+  content: '';
+  position: absolute;
+  inset: auto -30% -65% 40%;
+  height: 180px;
+  filter: blur(80px);
+  background: radial-gradient(circle, rgba(57, 193, 255, 0.28), transparent 70%);
+  pointer-events: none;
+}
+
+.step-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(108, 240, 194, 0.8);
+}
+
+.approach-step h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.approach-step p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.approach-step:hover,
+.approach-step:focus-within {
+  border-color: rgba(108, 240, 194, 0.45);
+  transform: translateY(-3px);
 }
 
 .project-meta {
