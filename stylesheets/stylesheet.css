@@ -304,6 +304,22 @@ body::after {
   text-shadow: 0 0 18px rgba(0, 255, 170, 0.4);
 }
 
+.card-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 150ms ease, text-shadow 150ms ease;
+}
+
+.card-link:hover,
+.card-link:focus {
+  color: var(--accent-strong);
+  text-shadow: 0 0 14px rgba(0, 255, 170, 0.5);
+}
+
 .instruction-list {
   counter-reset: step;
   list-style: none;
