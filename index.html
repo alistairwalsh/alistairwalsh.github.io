@@ -117,95 +117,49 @@
           <section class="block">
             <p class="line prompt">
               <span class="prompt-label">neo@artmatrix:~$</span>
-              <span class="command">nano setup_codex_mcp.md</span>
+              <span class="command">ls -la projects/</span>
             </p>
-            <h2 class="block-title">Codex + Docker MCP Server Setup</h2>
-            <ol class="instruction-list">
-              <li>
-                <header>0x01 · Prime the system</header>
+            <div class="glow-grid">
+              <article class="glow-card">
+                <h2 class="block-title">KentSt.FM</h2>
                 <p>
-                  Install command-line essentials and authenticate with GitHub. macOS example:
+                  Underground drum &amp; bass radio station — live streaming, agent-assisted scheduling, and a fleet of
+                  AI crew members keeping it broadcasting.
                 </p>
-                <pre><code>brew install git gh node pnpm
-gh auth login
-npm install -g @modelcontextprotocol/cli</code></pre>
-              </li>
-              <li>
-                <header>0x02 · Install Docker Desktop</header>
+                <ul class="tag-list">
+                  <li>Live radio</li>
+                  <li>Agent-operated</li>
+                  <li>Drum &amp; bass</li>
+                </ul>
+                <a href="https://radio.glueratglobal.com/kentst" target="_blank" rel="noopener" class="card-link">→ tune in</a>
+              </article>
+              <article class="glow-card">
+                <h2 class="block-title">GlueRatGlobal</h2>
                 <p>
-                  Download the latest build, enable Kubernetes if you compose multi-agent swarms, and share the directories
-                  where your prompts and datasets live.
+                  Satirical corporate empire and creative collective — building speculative futures through art,
+                  technology, and organised chaos.
                 </p>
-                <pre><code># macOS / Windows
-https://www.docker.com/products/docker-desktop/
-
-# Linux (example)
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-  https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre>
-              </li>
-              <li>
-                <header>0x03 · Spin up Model Context Protocol servers</header>
+                <ul class="tag-list">
+                  <li>Creative collective</li>
+                  <li>Speculative futures</li>
+                  <li>Naarm/Melbourne</li>
+                </ul>
+                <a href="https://glueratglobal.com" target="_blank" rel="noopener" class="card-link">→ enter the empire</a>
+              </article>
+              <article class="glow-card">
+                <h2 class="block-title">Open Science Teaching</h2>
                 <p>
-                  Launch dedicated containers for <strong>Perplexity</strong> intelligence and <strong>Playwright</strong> browser
-                  choreography. Swap API keys via environment variables or Docker secrets.</p>
-                <pre><code># Perplexity MCP server
-docker run -d --name mcp-perplexity \
-  -e PPLX_API_KEY=&lt;your_key&gt; \
-  -p 7001:7000 \
-  ghcr.io/modelcontextprotocol/mcp-perplexity:latest
-
-# Playwright MCP server
-docker run -d --name mcp-playwright \
-  -e BROWSER=chromium \
-  -p 7002:7000 \
-  ghcr.io/modelcontextprotocol/mcp-playwright:latest</code></pre>
-                <p>
-                  Register each endpoint with Codex or your orchestration layer:
+                  Python, R, and data science training for researchers — workshops and course materials designed
+                  around Software Carpentry principles and real scientific workflows.
                 </p>
-                <pre><code>codex servers add perplexity http://localhost:7001
-codex servers add playwright http://localhost:7002
-codex servers ls</code></pre>
-              </li>
-              <li>
-                <header>0x04 · Script the collaborative loop</header>
-                <p>
-                  Forge <code>codex.yaml</code> to choreograph agents, contexts, and prompts. Example skeleton:</p>
-                <pre><code>version: 1
-agents:
-  - id: synth-cartographer
-    server: perplexity
-    goals:
-      - map emerging research signals
-  - id: stagehand
-    server: playwright
-    goals:
-      - rehearse interactive scenes
-workspaces:
-  - path: ./white-rabbit-lab
-    templates:
-      - prompts/ritual.md</code></pre>
-              </li>
-            </ol>
-          </section>
-
-          <section class="block">
-            <p class="line prompt">
-              <span class="prompt-label">neo@artmatrix:~$</span>
-              <span class="command">cmatrix --color green --autodetect</span>
-            </p>
-            <p class="line output">
-              For bonus ambience, boot <code>cmatrix</code> in a spare terminal, dim the lights, and let the glyphs fall while your
-              agents iterate.
-            </p>
+                <ul class="tag-list">
+                  <li>Intersect Australia</li>
+                  <li>Pandas &amp; visualisation</li>
+                  <li>Open curriculum</li>
+                </ul>
+                <a href="https://alistairwalsh.github.io/python203-cheatsheet/" target="_blank" rel="noopener" class="card-link">→ course materials</a>
+              </article>
+            </div>
           </section>
 
           <section class="block">
